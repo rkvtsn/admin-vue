@@ -1,0 +1,121 @@
+@import "./theme/white/variables.scss";
+
+.container {
+  width: unset;
+  padding: $padding-base;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 18px;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+.disabled {
+  @extend .not-selectable;
+  opacity: .6;
+  cursor: not-allowed !important;
+
+  .disabled, :disabled, *[disabled] {
+    opacity: unset !important;
+  }
+}
+
+.not-selectable {
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+}
+
+.flexbox-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.flexbox-autofill {
+  align-content: stretch;
+  justify-content: stretch;
+  justify-items: stretch;
+  align-items: stretch;
+
+  & > * {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+}
+
+.flexbox-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.input {
+  border: 1px solid $field-border;
+  border-radius: $border-radius;
+  box-shadow: none;
+  padding: 0 $padding-field-left;
+  margin: 0;
+  min-height: $field-height;
+
+  &:focus {
+    border: solid 1px $field-border-focus;
+    box-shadow: 0 0 0 1px $field-border-focus-shadow;
+    outline: none;
+  }
+}
+
+
+.h1, .h2, .h3, .h4 {
+  color: initial;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: $font-weight-extra-bold;
+}
+
+.h1 {
+  color: $font-color-h1;
+  font-size: $font-size-h1;
+}
+
+.h2 {
+  color: $font-color-h2;
+  font-size: $font-size-h2;
+}
+
+.h3 {
+  color: $font-color-h3;
+  font-size: $font-size-h3;
+}
+
+// group's caption
+.h4 {
+  color: $font-color-h4;
+  font-size: $font-size-h4;
+}

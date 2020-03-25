@@ -1,0 +1,332 @@
+@import './theme/white/variables.scss';
+.sprite {
+  text-align: center;
+  display: inline-block;
+
+  // icons for mime (documents types)
+  &.icons {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: url(../img/icons/upload-component-docs-type-icons.png) no-repeat -240px 0;
+
+    &[class*="icons icon-"]:before,
+    &[class*="icons icon-"]::before {
+      content: '' !important;
+    }
+
+    &.icon-doc {
+      background-position: 0 0;
+    }
+
+    &.icon-jpg {
+      background-position: -30px 0;
+    }
+
+    &.icon-rar {
+      background-position: -60px 0;
+    }
+
+    &.icon-png {
+      background-position: -90px 0;
+    }
+
+    &.icon-pdf {
+      background-position: -120px 0;
+    }
+
+    &.icon-txt {
+      background-position: -150px 0;
+    }
+
+    &.icon-xls {
+      background-position: -180px 0;
+    }
+
+    &.icon-zip {
+      background-position: -210px 0;
+    }
+  }
+
+  &.sprite-tab-cancel {
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    background: url(../img/icons/sprite_10x10.png) left center no-repeat;
+    position: relative;
+    left: 4px;
+    top: 1px;
+  }
+
+
+  &.sprite-large {
+    width: $nic-size-sprite-large;
+    height: $nic-size-sprite-large;
+    line-height: $nic-size-sprite-large;
+    background: url(../img/icons/sprite_30x30.png) 30px center no-repeat;
+
+    .disabled {
+      opacity: .6;
+    }
+
+    &.sprite-dialog {
+      width: 30px;
+      height: 30px;
+      background: url(../img/icons/sprite_dialog.png) left center no-repeat;
+
+      &.sprite-error {
+        background-position: 0 0;
+      }
+
+      &.sprite-warning {
+        background-position: -30px 0;
+      }
+
+      &.sprite-question {
+        background-position: -60px 0;
+      }
+
+      &.sprite-info {
+        background-position: -90px 0;
+      }
+    }
+
+
+    //region generator .sprite.sprite-large.sprite-*
+    /*
+    auto generate sprite by Name n  position in sprite.png
+    -----------------------------------------------------
+    .sprite.sprite-large.sprite-hamburg {
+      background-position: -5448px 0;
+    }
+     */
+    $largeSprites: (
+        'add-document': (-4560px, 0),
+        'add-graphic': (-4200px, 0),
+        'add-list': (-3660px, 0),
+        'arrow-back': (-1680px, 0),
+        'arrow-down': (-1620px, 0),
+        'arrow-left': (-1440px, 0),
+        'arrow-reload': (-1800px, 0),
+        'arrow-reload-right': (-1740px, 0),
+        'arrow-right': (-1500px, 0),
+        'arrow-up': (-1560px, 0),
+        'back': (-1080px, 0),
+        'bell': (-5220px, 0),
+        'blocks': (-2460px, 0),
+        'button-plus': (-5520px, 0),
+        'calculator': (-1320px, 0),
+        'calculator-keys': (-1380px, 0),
+        'card': (-420px, 0),
+        'chain': (-1020px, 0),
+        'change-checkbox': (-3060px, 0),
+        'check': (-240px, 0),
+        'checkbox-status': (-2760px, 0),
+        'clear': (-720px, 0),
+        'clock': (-2520px, 0),
+        'complete-db': (-4980px, 0),
+        'configure-table': (-3720px, 0),
+        'copy': (-300px, 0),
+        'cross': (-120px, 0),
+        'cut': (-960px, 0),
+        'db-download': (-2280px, 0),
+        'db-upload': (-2220px, 0),
+        'dictionary': (-4680px, 0),
+        'download': (-600px, 0),
+        'drag-down': (-2940px, 0),
+        'drag-full': (-3000px, 0),
+        'drag-up': (-2880px, 0),
+        'edit-calendar': (-3900px, 0),
+        'edit-graphic': (-4260px, 0),
+        'edit-list': (-3780px, 0),
+        'eraser': (-4500px, 0),
+        'excel': (-5910px, 0),
+        'exclude-user': (-4140px, 0),
+        'find-graphic': (-2340px, 0),
+        'folder': (-840px, 0),
+        'folder-2': (-4620px, 0),
+        'forward-next': (-1980px, 0),
+        'forward-prev': (-2040px, 0),
+        'go-back': (-5728px, 0),
+        'graphic': (-2400px, 0),
+        'graphic-zoom': (-4740px, 0),
+        'group': (-1258px, 0),
+        'hamburg': (-5430px, 0),
+        'hotspot': (-5850px, 0),
+        'info': (-3960px, 0),
+        'info-file': (-3180px, 0),
+        'layout-dark-1': (-4320px, 0),
+        'layout-dark-2': (-4410px, 0),
+        'layout-light-1': (-4380px, 0),
+        'layout-light-2': (-4470px, 0),
+        'list': (-3600px, 0),
+        'list-complete': (-3840px, 0),
+        'loupe': (-5370px, 0),
+        'master': (-5340px, 0),
+        'mix': (-5280px, 0),
+        'no-signal': (-3360px, 0),
+        'no-track': (-3300px, 0),
+        'notes-list': (-4800px, 0),
+        'paste': (-900px, 0),
+        'pause': (-1859px, 0),
+        'pencil': (-180px, 0),
+        'pick-item': (-4860px, 0),
+        'pin': (-5400px 0),
+        'pin-2': (-5581px, 0),
+        'pin-3': (-5610px, 0),
+        'play': (-1920px, 0),
+        'plus': (-60px, 0),
+        'power': (1px, 0),
+        'print': (-5940px, 0),
+        'question': (-4020px, 0),
+        'refresh': (-479px, 0),
+        'refresh-document': (-5670px, 0),
+        'remove-document': (-5640px, 0),
+        'revert-file': (-3240px, 0),
+        'rocket': (-3480px, 0),
+        'ruler': (-660px, 0),
+        'save': (-360px 0),
+        'save-document': (-5040px, 0),
+        'search': (-2580px, 0),
+        'search-minus': (-2700px, 0),
+        'search-plus': (-2640px, 0),
+        'send-file': (-3120px, 0),
+        'send-mail': (-2820px, 0),
+        'settings': (-1139px, 1px),
+        'skip-next': (-2100px, 0),
+        'skip-prev': (-2160px, 0),
+        'sort-list': (-4920px, 0),
+        'swap-document': (-5701px, 0),
+        'table': (-3540px, 0),
+        'track': (-3420px, 0),
+        'trash': (-780px, 0),
+        'tree-folders': (-5100px, 0),
+        'ungroup': (-1198px, 0),
+        'upload': (-539px, 0),
+        'user': (-5160px, 0),
+        'user-group': (-4080px, 0),
+        'vert-dot': (-5491px, 0),
+        'word': (-5970px, 0)
+    );
+
+    @each $item, $props in $largeSprites {
+      &.sprite-#{$item} {
+        background-position: nth($props, 1) nth($props, 2);
+      }
+    }
+    //endregion
+  }
+
+
+  &.sprite-medium {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: url(../img/icons/sprite_20x20.png) left center no-repeat;
+
+    //region generator .sprite.sprite-medium.sprite-*
+    $mediumSprites: (
+        'blank': (-580px, 0),
+        'book': (-640px, 0),
+        'box': (-500px, 0),
+        'box-disabled': (-520px, 0),
+        'cell': (-160px, 0),
+        'cell-checked': (-220px, 0),
+        'cell-checked-disabled': (-240px, 0),
+        'cell-disabled': (-180px, 0),
+        'cell-filled': (-280px, 0),
+        'cell-filled-disabled': (-300px, 0),
+        'cell-filled-hover': (-320px, 0),
+        'cell-hover': (-200px, 0),
+        'check': (-460px, 0),
+        'check-disabled': (-480px, 0),
+        'checked-hover': (-260px, 0),
+        'circle': (-340px, 0),
+        'circle-disabled': (-380px, 0),
+        'circle-filled': (-400px, 0),
+        'circle-filled-disabled': (-440px, 0),
+        'circle-filled-hover': (-420px, 0),
+        'circle-hover': (-360px, 0),
+        'clip': (-680px, 0),
+        'close': (-40px, 0),
+        'close-hover': (-60px, 0),
+        'close-red': (-780px, 0),
+        'dot': (-540px, 0),
+        'dot-disabled': (-560px, 0),
+        'doublepointer-left': (-1080px, 0),
+        'doublepointer-left-disabled': (-1100px, 0),
+        'doublepointer-left-hover': (-1121px, 0),
+        'doublepointer-right': (-1020px, 0),
+        'doublepointer-right-disabled': (-1040px, 0),
+        'doublepointer-right-hover': (-1059px, 0),
+        'folder': (-600px, 0),
+        'minus': (-120px, 0),
+        'minus-hover': (-140px, 0),
+        'ok': (-700px, 0),
+        'order-down': (-1140px, 0),
+        'order-up': (-1160px, 0),
+        'people': (-660px, 0),
+        'plus': (-80px, 0),
+        'plus-hover': (-100px, 0),
+        'pointer-down': (-960px, 0),
+        'pointer-down-disabled': (-980px, 0),
+        'pointer-down-hover': (-1000px, 0),
+        'pointer-down-white': (-820px, 0),
+        'pointer-left': (-900px, 0),
+        'pointer-left-disabled': (-920px, 0),
+        'pointer-left-hover': (-940px, 0),
+        'pointer-right': (-840px, 0),
+        'pointer-right-disbaled': (-860px, 0),
+        'pointer-right-hover': (-880px, 0),
+        'pointer-right-white': (-800px, 0),
+        'question-blue': (-760px, 0),
+        'question-gray': (-740px, 0),
+        'search': (0, 0),
+        'search-cancel': (-20px, 0),
+        'warning': (-720px, 0)
+    );
+
+    @each $item, $props in $mediumSprites {
+      &.sprite-#{$item} {
+        background-position: nth($props, 1) nth($props, 2);
+      }
+    }
+    //endregion
+  }
+
+
+  &.sprite-small {
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    background: url(../img/icons/sprite_10x10.png) left center no-repeat;
+
+    &.sprite-close {
+      background-position: -10px 0;
+    }
+
+    //region generator .sprite.sprite-small.sprite-*
+    $smallSprites: (
+        'window-restore': (-20px, 0px),
+        'carret-left': (-30px, 0px),
+        'carret-left-disabled': (-40px, 0px),
+        'carret-right': (-50px, 0px),
+        'carret-right-disabled': (-60px, 0px),
+        'carret-up': (-70px, 0px),
+        'carret-up-disable': (-80px, 0px),
+        'carret-down': (-90px, 0px),
+        'carret-down-disabled': (-100px, 0px),
+        'max-right': (-110px, 0px),
+        'max-right-disabled': (-120px, 0px),
+        'max-left': (-130px, 0px),
+        'max-left-disabled': (-140px, 0px)
+    );
+
+    @each $item, $props in $smallSprites {
+      &.sprite-#{$item} {
+        background-position: nth($props, 1) nth($props, 2);
+      }
+    }
+    //endregion
+  }
+}

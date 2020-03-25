@@ -1,0 +1,499 @@
+@import "../../../../css/theme/base/color.scss";
+@import "../../../../css/theme/base/variables.scss";
+@import "../../../../css/theme/white/variables.scss";
+@import "../../../../css/theme/white/colors.scss";
+@import "../../../../css/mixins.scss";
+
+
+$nic-input-select-padding: 5px;
+
+
+.NicForm {
+  // max-width:  1000px;
+  // margin: 0;
+  // margin: 5px 10px 10px;
+  height: auto;
+
+  &.bordered {
+    border: 1px solid $border-color;
+
+    &+.NicForm.bordered {
+      margin-top: 10px;
+    }
+  }
+
+  option {
+    padding: $nic-input-select-padding;
+  }
+
+  .nic-combobox {
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px auto;
+
+    .clearfix {
+      display: none;
+    }
+
+    .combobox-label {
+      float: none;
+      display: block;
+      @extend .NicLabel;
+      height: auto;
+      min-height: auto;
+    }
+
+    .combobox {
+      flex: 2;
+      float: none;
+      display: block;
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    border: 1px solid $field-border;
+    border-radius: $border-radius;
+    padding: 0;
+    margin: 0;
+    min-height: $field-height;
+  }
+
+  textarea {
+    min-height: calc(#{$field-height} * 2);
+    height: calc(#{$field-height} * 2);
+  }
+
+  button,
+  input[type="button"],
+  input[type="submit"],
+  button[type="submit"] {
+    margin-left: 5px;
+  }
+
+  .required {
+    .NicLabel {
+      position: relative;
+    }
+
+    .NicLabel:after {
+      position: absolute;
+      margin-left: 1px;
+      top: 0;
+      margin-top: -4px;
+      align-items: center;
+      color: red;
+      content: "*";
+    }
+  }
+
+  .NicLabel {
+    padding: 0;
+    margin: 0 10px 0 0;
+    font-weight: normal;
+    text-align: right;
+    flex: 1;
+    max-width: $field-label-width-max;
+    min-width: $field-label-width-max;
+  }
+
+  .NicForm__Caption {
+    font-weight: bold;
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .NicForm__Error {
+    vertical-align: middle;
+    z-index: 200;
+    // background: #cc3333;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    padding: 2px;
+    line-height: 12px;
+  }
+
+  .NicForm__Component-HasError input {
+    border: 1px solid #cc3333;
+  }
+
+  //!!! DO NOT DELETE: Обеспечение МО вывод ошибок 
+  .NicInput__Body:hover .NicForm__ErrorText,
+  input.NicInput__Item__Field:focus+.NicForm__Error .NicForm__ErrorText {
+    display: inline;
+    background: #cc3333;
+    border-radius: 3px;
+    padding: 2px;
+    color: #fff;
+  }
+
+  // .NicInput__Body:hover .NicForm__ErrorIcon,
+  // input.NicInput__Item__Field:focus+.NicForm__Error .NicForm__ErrorIcon {
+  //   display: none;
+  // }
+
+  .NicForm__Error {
+    display: inline-block;
+    vertical-align: middle;
+    top: 7px;
+    // right: -17px;
+    position: absolute;
+    z-index: 100;
+    // background: #CC3333;
+    // color: #FFF;
+    color: #cc3333;
+    border-radius: 3px;
+    padding: 0px;
+    line-height: 13px;
+    cursor: default;
+
+    &Icon {
+      font-size: 13px;
+      color: #cc3333;
+    }
+
+    &Text {
+      display: none;
+      font-size: 11px;
+    }
+  }
+
+  .NicForm__Row {
+    display: flex;
+    margin: 10px -5px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+
+    .NicForm__Component {
+      flex: 1;
+      flex-direction: row;
+      margin: auto 5px;
+
+      .NicInput__Body {
+        // min-width: 200px;
+      }
+
+      &>.NicLabel {
+        &+* {
+          flex: 2 0 0;
+        }
+      }
+
+    }
+  }
+
+  &__BottomToolbar {
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    button,
+    input[type="button"],
+    input[type="submit"],
+    button[type="submit"] {
+      // margin-left: auto;
+      margin-right: 0;
+
+      &+* {
+        // margin-left: 5px;
+      }
+    }
+  }
+
+  &__Component {
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+
+
+    &-justify {
+      display: block;
+      width: 100%;
+
+      &>.NicLabel {
+        text-align: left;
+        display: block;
+        width: 100% !important;
+        max-width: 100%;
+      }
+
+      &>.NicLabel+* {
+        width: 100%;
+      }
+
+      &>.NicLabel+input,
+      &>.NicLabel+textarea,
+      &>.NicLabel+.combobox {
+        display: block;
+        width: 100% !important;
+      }
+    }
+
+    &>&Submit {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    >.NicLabel+* {
+      flex: 2;
+      min-height: $field-height;
+      // min-width: $field-width-min;
+      min-width: 20px;
+      max-width: $field-width-max;
+
+      &>* {
+        // width: 100%;
+      }
+    }
+
+    &.NicInput-textarea {
+      .NicLabel {
+        //margin-top: 3px;
+      }
+
+      align-items: flex-start;
+    }
+
+    // .NicForm__Component-newline
+    &-newline {
+      align-items: flex-start;
+      flex-direction: column;
+
+      .NicLabel+* {
+        width: 100%;
+        margin: 10px;
+      }
+
+      &>.NicLabel {
+        flex: 1 0 0;
+      }
+    }
+  }
+
+
+  //TODO: .NicForm-grid WARN:not finished
+  &-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-2 {
+      .NicForm__Component {
+        width: 50%;
+        margin: 0;
+      }
+    }
+
+    &-3 {
+      .NicForm__Component {
+        width: 33.333333%;
+        margin: 5px 0;
+      }
+
+      .NicForm__Component-justify {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.NicForm-newline .NicForm__Row>.NicForm__Component,
+.NicForm__Row-newline>.NicForm__Component,
+.newline>.NicForm__Component,
+.NicForm-newline .NicForm__Component,
+.NicForm__Component-newline,
+.NicForm__Component.newline,
+.NicForm-newline .NicForm__Component {
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: $field-height;
+
+  &>.NicLabel+* {
+    //min-height: $field-height;
+    width: 100% !important;
+    // max-width: 500px;
+  }
+
+  &>.NicLabel {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    flex: 0;
+  }
+}
+
+.NicRadioGroup,
+.NicCheckboxGroup {
+
+  //.NicRadioGroup__Group
+  &__Group {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-justify {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+
+    // .NicRadioGroup__GroupItem
+    &Item {
+      margin-right: 15px;
+
+      .NicLabel {
+        margin: 0 3px;
+      }
+    }
+  }
+}
+
+
+@-moz-document url-prefix() {
+  .NicSelect select.NicSelect__Control {
+    min-width: calc(#{$field-width-min} + #{$nic-input-select-padding});
+    padding: $nic-input-select-padding;
+  }
+
+
+
+  .NicForm-newline .NicForm__Row>.NicForm__Component,
+  .NicForm__Row-newline>.NicForm__Component,
+  .newline>.NicForm__Component,
+  .NicForm-newline .NicForm__Component,
+  .NicForm__Component-newline,
+  .NicForm__Component.newline {
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: $field-height;
+
+    &>.NicLabel+* {
+      width: calc(100% - 3px);
+      min-height: $field-height;
+    }
+
+    &>.NicLabel {
+      &+textarea {
+        width: calc(100% - 10px);
+      }
+
+      &+input {
+        width: calc(100% - 10px);
+      }
+    }
+
+    &>.NicLabel {
+      flex: 0;
+      min-height: $field-height;
+    }
+  }
+
+}
+
+.NicForm {
+  .NicForm__Row-inline {
+
+    .NicLabel,
+    .NicForm__Component {
+      flex: inherit;
+    }
+  }
+}
+
+.NicCheckbox {
+  display: flex !important;
+  flex-direction: row !important;
+
+  .NicLabel {
+    text-align: right;
+    max-width: none;
+    min-width: auto;
+    width: auto;
+
+
+    +input {
+      display: inline;
+      text-align: left;
+      width: auto;
+      min-width: auto;
+      max-width: none;
+      height: inherit;
+      min-height: inherit;
+    }
+  }
+
+  &__Item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+
+    input {
+      margin: 0;
+
+      &:focus {
+        outline: none !important;
+      }
+    }
+
+    .NicLabel {
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 1490px) {
+  .NicForm {
+
+    .NicCheckboxGroup {
+      align-items: flex-start;
+      flex-direction: column;
+
+      .NicCheckboxGroup__Group {
+        padding-left: 30px;
+        flex-direction: column;
+        flex: 1 1 100%;
+      }
+    }
+
+    .nic-combobox {
+      display: block;
+
+      .combobox-label {
+        text-align: left;
+      }
+
+      .combobox {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__Component {
+      display: block;
+
+      .NicLabel {
+        text-align: left;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      >.NicLabel+* {
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      >.NicLabel+.NicCheckbox__Item {
+        min-width: auto;
+        max-width: none;
+        width: auto;
+      }
+    }
+  }
+}

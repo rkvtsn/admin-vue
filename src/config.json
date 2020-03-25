@@ -1,0 +1,13 @@
+{
+  "api-address": "0",
+  "version": "0",
+  "release-version": "0",
+  "release-date": "0",
+  "project-name": "0",
+  "logger": {
+    "debug": false,
+    "error": false,
+    "info": false,
+    "warning": false
+  }
+}

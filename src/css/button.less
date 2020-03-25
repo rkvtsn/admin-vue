@@ -1,0 +1,63 @@
+button {
+  outline: 0px !important;
+  outline: none !important;
+  outline-offset: none;
+  mix-blend-mode: undefined;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+
+  &.btn.btn-nic {
+    min-width: 100px;
+  }
+
+  &.btn.btn-primary {
+    background: linear-gradient(to top, #5c8fae, #6498b8);
+    border: solid 1px #747a7f;
+
+    &:focus {
+      color: #fff;
+      background: #55829d;
+      border: solid 1px #747a7f;
+    }
+
+    &:hover {
+      border: solid 1px #747a7f;
+      color: #fff;
+      background: #77a8c7;
+    }
+
+    &:active {
+      background: #55829d;
+      border: solid 1px #747a7f;
+    }
+  }
+
+  &.btn-default {
+    background-image: linear-gradient(to bottom, #fefefe, #ededed);
+
+    &:hover {
+      background-image: linear-gradient(to bottom, #f0f0f0, #e1e1e1);
+    }
+
+    &:focus {
+      background-image: linear-gradient(to bottom, #fefefe, #ededed);
+    }
+
+    &:active {
+      background-image: linear-gradient(to bottom, #d9d9d9, #d9d9d9);
+    }
+  }
+}
+
+button.btn {
+  min-width: 100px;
+}
+
+button.btn.btn-small,
+button.btn-small,
+.btn.btn-icon,
+.nic-toolbar-item button.btn {
+  max-width: 30px;
+  min-width: 30px;
+}

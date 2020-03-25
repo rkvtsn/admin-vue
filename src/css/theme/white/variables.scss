@@ -1,0 +1,34 @@
+@import "../base/variables";
+
+
+$nic-header-height: 40px;
+$border-radius: 0px;
+$nic-padding: 10px;
+$nic-height-row: calc(49px - 26px);
+$nic-size-sprite-large: 28px;
+$nic-width-button: 30px;
+$visibility-time: 0.3s;
+
+$sidebar-right-width: 319px;
+$sidebar-left-width: 300px;
+
+
+//region mixins
+.nic-padding-border-left {
+  padding-left: $nic-padding;
+  padding-top: $nic-padding;
+  padding-bottom: $nic-padding;
+}
+
+.nic-padding-border-right {
+  padding-right: $nic-padding;
+  padding-top: $nic-padding;
+  padding-bottom: $nic-padding;
+}
+
+.nic-padding-border-middle {
+  padding-top: $nic-padding;
+  padding-bottom: $nic-padding;
+}
+
+//endregion

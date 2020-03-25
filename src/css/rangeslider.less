@@ -1,0 +1,78 @@
+@range-thumb-border: #ccc;
+@range-thumb-background: #fff;
+
+@range-track-border: #cccccc;
+@range-track-background: #eee;
+@range-track-background-focus: #e0e0e0;
+
+@range-thumb-width: 12px;
+@range-thumb-height: 18px;
+@range-thumb-radius: 2px;
+
+@range-track-height: 4.5px;
+@range-track-radius: 0px;
+
+@range-thumb-margin: -6px;
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid @range-thumb-border;
+  height: @range-thumb-height;
+  width: @range-thumb-width;
+  border-radius: @range-thumb-radius;
+  background: @range-thumb-background;
+  cursor: pointer;
+  margin-top: @range-thumb-margin; /* margin in Chrome, !but in Firefox and IE it's automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 1px solid @range-thumb-border;
+  height: @range-thumb-height;
+  width: @range-thumb-width;
+  border-radius: @range-thumb-radius;
+  background: @range-thumb-background;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: @range-track-height;
+  cursor: pointer;
+  background: @range-track-background;
+  border-radius: @range-track-radius;
+  border: 0.2px solid @range-track-border;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: @range-track-background-focus;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: @range-track-height;
+  cursor: pointer;
+  background: @range-track-background;
+  border-radius: 1.3px;
+  border: 0.2px solid @range-track-border;
+}
+
+input[type=range]:focus::-moz-range-track {
+  background: @range-track-background-focus;
+}

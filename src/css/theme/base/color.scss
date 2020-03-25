@@ -1,0 +1,24 @@
+/* SHADOWS */
+$mdb-shadow-key-umbra-opacity:      0.2 !default;
+$mdb-shadow-key-penumbra-opacity:   0.14 !default;
+$mdb-shadow-ambient-shadow-opacity: 0.12 !default;
+
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+$color-dark:            #495057 !default;
+$color-light:           #fff !default;
+$color-middle:          #999 !default;
+$color-primary:         #000 !default;
+$color-gray:            #eee !default;
+
+$text-color-light:      $color-light;
+$text-color-primary:    $color-dark;
+$text-bg:               $color-light;
+
+$border-color:          $color-gray;
+$field-border:          $border-color;
+$button-border:         $border-color;

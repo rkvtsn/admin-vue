@@ -1,0 +1,259 @@
+@import './var.scss';
+
+@media screen and (max-width: 560px) {
+
+  .sidebar-left,
+  .v-sidebar-menu {
+    width: 100% !important;
+    z-index: 1000;
+  }
+
+  .nic-app-header.navbar.navbar-fixed-top {
+    width: 100% !important;
+    z-index: 1001;
+  }
+}
+
+.sidebar-left>.v-sidebar-menu>.vsm-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100% - 80px);
+}
+
+
+.v-sidebar-menu,
+.v-sidebar-menu * {
+  box-sizing: border-box;
+}
+
+.nic-app-header.navbar.navbar-fixed-top {
+  width: 100% !important;
+  z-index: 1001;
+}
+
+.v-sidebar-menu {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $nic-sidebar-bg;
+  padding-top: 40px;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 50px;
+  transition: 0.3s width;
+}
+
+.v-sidebar-menu .vsm-item {
+  position: relative;
+  display: block;
+}
+
+.v-sidebar-menu .vsm-item .vsm-link {
+  position: relative;
+  border: 0;
+  outline: none;
+  outline: 0;
+  display: block;
+  cursor: pointer;
+  font-size: 13px;
+  color: $nic-sidebar-text-color;
+  padding: 12px;
+  // padding-left: 12px;
+  padding-right: 12px;
+  line-height: $line-height;
+  text-decoration: none;
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+.v-sidebar-menu .vsm-item.open-item .vsm-link {
+  padding-right: 25px;
+}
+
+.vsm-link.router-link-active,
+.vsm-link.router-link-active:hover,
+.vsm-link.router-link-active:focus {
+  background: $nic-sidebar-active !important;
+}
+
+.v-sidebar-menu .vsm-item.first-item>.vsm-link:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.v-sidebar-menu .vsm-title,
+.v-sidebar-menu .vsm-item.first-item>.vsm-link>.vsm-title {
+  display: block;
+  // white-space: nowrap;
+}
+
+.v-sidebar-menu .vsm-icon {
+  float: left;
+  line-height: $line-height;
+  margin-right: 10px;
+  color: $nic-sidebar-text-color;
+}
+
+.v-sidebar-menu .vsm-item.first-item>.vsm-link>.vsm-icon {
+  height: 30px;
+  line-height: $line-height;
+  width: 30px;
+  text-align: center;
+  // background: $darkenBg;
+  border-radius: 3px;
+}
+
+.v-sidebar-menu .vsm-item.mobile-item>.vsm-link>.vsm-icon {
+  height: 30px;
+  line-height: $line-height;
+  width: 30px;
+  text-align: center;
+}
+
+.v-sidebar-menu .vsm-item.parent-active-item .vsm-list {
+  background: rgba($nic-sidebar-active-bg, 0.7);
+}
+
+.v-sidebar-menu .vsm-item.first-item.parent-active-item .vsm-list {
+  background: rgba($nic-sidebar-active-bg, 0);
+}
+
+// .vsm-list > .vsm-item a {
+// padding-left: 15px !important;
+// }
+
+.v-sidebar-menu .vsm-arrow {
+  width: 35px;
+  padding-left: 4px;
+  text-align: center;
+  font-style: normal;
+  // font-weight: 900;
+  color: #ffff;
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s transform;
+}
+
+// .v-sidebar-menu .vsm-arrow:after {
+//   content: '\E862';
+// }
+.v-sidebar-menu .vsm-arrow.open-arrow {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.v-sidebar-menu .vsm-dropdown>.vsm-list {
+  // background: $lightenBg;
+  // padding: 5px;
+}
+
+.show-animation-enter-active {
+  animation: show-animation 0.3s;
+}
+
+.show-animation-leave-active {
+  animation: show-animation 0.3s reverse;
+}
+
+@keyframes show-animation {
+  0% {
+    opacity: 0;
+    // transform: opacity(0);
+  }
+
+  100% {
+    opacity: 1;
+    // transform: scale(1);
+  }
+}
+
+.v-sidebar-menu .vsm-mobile-bg {
+  // background-color: $primaryColor;
+}
+
+.slide-animation-enter-active {
+  animation: slide-animation 0.2s;
+}
+
+.slide-animation-leave-active {
+  animation: slide-animation 0.2s reverse;
+}
+
+@keyframes slide-animation {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.v-sidebar-menu .vsm-link[disabled] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.v-sidebar-menu.vsm-default .vsm-link:hover,
+.v-sidebar-menu .vsm-dropdown>.vsm-list .vsm-link:hover {
+  background-color: rgba($nic-sidebar-active-bg, 0.6);
+}
+
+.v-sidebar-menu.vsm-default .vsm-item.first-item.open-item>.vsm-link {
+  // background: $primaryColor;
+}
+
+.v-sidebar-menu .vsm-item.first-item.active-item>.vsm-link {
+  // box-shadow: 3px 0px 0px 0px $primaryColor inset;
+}
+
+.v-sidebar-menu .vsm-item.active-item>.vsm-link {
+  // font-weight: 600;
+  // background: #ccc;
+}
+
+.v-sidebar-menu .vsm-item.first-item.parent-active-item>.vsm-link {
+  // box-shadow: 3px 0px 0px 0px $primaryColor inset;
+}
+
+.v-sidebar-menu .vsm-item.parent-active-item>.vsm-link {
+  // font-weight: 600;
+  background: $nic-sidebar-active-bg;
+}
+
+.v-sidebar-menu .vsm-header {
+  // color: rgba($textColor, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.v-sidebar-menu .collapse-btn {
+  display: block;
+  color: $nic-sidebar-text-color;
+  // background-color: $darkenBg;
+  text-align: center;
+  font-style: normal;
+  font-weight: 900;
+  position: absolute;
+  height: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.vsm-list .vsm-list .vsm-link {
+  padding-left: 20px;
+}
+
+.vsm-item.first-item > .vsm-dropdown > .vsm-list > .vsm-item > .vsm-link > .vsm-title {
+  padding-left: 5px;
+}

@@ -1,0 +1,35 @@
+$font-size-base:               13px !default;
+$font-size-large:              ceil(($font-size-base * 1.25)) !default; // ~17px
+$font-size-small:              ceil(($font-size-base * 0.80)) !default; // ~11px
+
+$font-size-h1:                 1.6923rem !default;
+$font-size-h2:                 1.2308rem !default;
+$font-size-h3:                 1.0769rem !default;
+$font-size-h4:                 1rem !default;
+$font-size-h5:                 1rem !default;
+$font-size-h6:                 1rem !default;
+$font-paragraph:               14px !default;
+$font-size-navbar:             16px !default;
+
+$font-weight-light:            300 !default;
+$font-weight-default:          400 !default;
+$font-weight-bold:             500 !default;
+$font-weight-extra-bold:       700 !default;
+$font-weight-ultra-bold:       900 !default;
+
+$padding-base:                 15px !default;
+$margin-base:                  15px !default;
+$margin-field-left:            15px !default;
+$margin-label-right:           15px !default;
+$padding-field-left:           3px !default;
+$padding-field-left-error:     20px !default;
+$margin-label-right:           10px !default;
+
+$border-radius:                4px !default;
+
+$field-height:                 30px;
+$field-width-max:              100%;
+$field-width-min:              160px;
+$field-label-width-max:        160px;
+
+$nic-form-max-width:           1200px;

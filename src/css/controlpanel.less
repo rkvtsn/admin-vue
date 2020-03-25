@@ -1,0 +1,55 @@
+.controlpanel {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &Control {
+    &:hover {
+      border: 1px solid #eee;
+      .controlpanelControl__sprite {
+        &-loadfromdb { background-position: -120px -0px; }
+        &-loadfromfile { background-position: -65px -55px; }
+        &-savetodb { background-position: -175px -110px; }
+        &-newreport { background-position: -10px -110px; }
+        &-toexcel { background-position: -65px -220px; }
+        &-savetofile { background-position: -120px -165px; }
+      }
+    }
+    border: 1px solid #fff;
+    cursor: pointer;
+    padding: 0;
+    margin: 10px auto;
+    &__caption {
+      text-align: center;
+    }
+    &__sprite {
+      background: url('../img/sprite_organizations.png') no-repeat no-repeat;
+      display: block;
+      margin: auto;
+      height: 45px;
+      width: 55px;
+      overflow: hidden; text-indent: -9999px; text-align: left;
+      &-loadfromdb { background-position: -10px -0px; }
+      &-loadfromfile { background-position: -175px -0px; }
+      &-newreport { background-position: -120px -55px; }
+      &-savetodb { background-position: -65px -110px; }
+      &-savetofile { background-position: -10px -165px; }
+      &-toexcel { background-position: -175px -165px; }
+    }
+
+    &-disabled, &-disabled:hover {
+      .controlpanelControl {
+        &__caption {
+          color: #ccc;
+        }
+        &__sprite {
+          &-loadfromfile { background-position: -10px -55px; }
+          &-newreport { background-position: -175px -55px; }
+          &-savetodb { background-position: -120px -110px; }
+          &-savetofile { background-position: -65px -165px; }
+          &-toexcel { background-position: -10px -220px; }
+          &-loadfromdb { background-position: -65px -0px; }
+        }
+      }
+    }
+  }
+}

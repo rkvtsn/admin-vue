@@ -1,0 +1,28 @@
+.chart-master {
+  display: flex;
+
+  .chart-table {
+    display: flex;
+    flex-direction: column;
+
+    .nic-form-group {
+      margin: 10px auto;
+    }
+  }
+
+  .chart-port {
+    padding: 5px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .nic-form-group {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #efefef;
+  }
+
+  .NicForm {
+    width: 550px;
+  }
+}

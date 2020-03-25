@@ -1,0 +1,99 @@
+@import "../base/colors";
+
+//region used colors
+$nic-white: $white-five;
+$nic-light-gray: $pale-grey;
+$nic-light-blue: #d0e0ea;
+$nic-blue: $faded-blue-two;
+$nic-blue-gray: $gunmetal;
+$nic-gray: $brownish-grey;
+$nic-black: #1f1f1f;
+$nic-red: $reddish;
+$nic-green: $limeade;
+$nic-blue-gray-light: $slate;
+$nic-blue-gray-dark: $charcoal-grey;
+$nic-blue-gray-middle: $gunmetal-two;
+$nic-light-gray-middle: $silver-three;
+$nic-gray-middle: $warm-grey-three;
+$nic-light-gray-normal: $silver-four;
+$nic-light-gray-normal-2: $silver-five;
+$nic-green-light: $light-grey-green;
+$nic-yellow: $pale-peach;
+$nic-red-light: $blush;
+$nic-blue-dark: $cloudy-blue;
+$nic-blue-middle: $light-blue-grey-two;
+$nic-gray-light: $pale-grey-two;
+$nic-yellow-light: $creme;
+//endregion
+
+
+$brand-success: $nic-green;
+$brand-info: $nic-blue;
+$brand-warning: $nic-yellow;
+$brand-error: $nic-red;
+
+$color-dark: $nic-black;
+$color-light: #fff;
+$color-middle: $nic-gray;
+$color-primary: $nic-black;
+
+$hover-bg: $nic-blue-middle;
+$selected-bg: $nic-blue;
+$text-color-primary: $nic-black;
+$nic-text-color-hovered: $white-five;
+
+$nic-caption-color: $gunmetal;
+$nic-footer-color: $light-blue-grey;
+$nic-back-color-hovered: $faded-blue-two;
+$nic-border-color-hovered: $faded-blue-two;
+$border-color: $nic-light-gray-normal;
+
+$nic-list-alternation: $nic-gray-light;
+$nic-progress-bar: #88B75F;
+$nic-file-warning: $nic-yellow-light;
+
+$nic-message-conf: $nic-green-light;
+$nic-message-warning: $nic-yellow;
+$nic-message-error: $nic-red-light;
+
+$nic-tab-hover: $hover-bg;
+
+$tooltip-bg-color: $nic-yellow-light;
+$tooltip-border-color: $warm-grey;
+$field-border: $border-color;
+$field-border-focus: $nic-blue;
+$field-border-focus-shadow: $light-blue-grey;
+$button-border: $nic-gray-middle;
+$field-error-border: $nic-red;
+$field-error-shadow: $nic-red-light;
+$field-icon-error-color: $brand-error;
+$field-icon-error-bg: none;
+$field-icon-info-color: $brand-info;
+$field-icon-info-bg: none;
+
+$nic-table-hover: $hover-bg;
+$nic-table-header-bg: #d5d8db;
+$nic-table-body-bg: $color-light;
+$nic-table-border: $nic-light-gray-normal;
+$nic-table-odd: $nic-gray-light;
+$nic-table-even: $nic-list-alternation;
+
+$brand-warning: $nic-message-warning;
+$brand-error: $nic-message-error;
+
+$app-header-bg-color: $white-five;
+$app-header-copy-color: rgba(28, 32, 35, 0.6);
+
+$sidebar-bg-color: $nic-blue-gray-light;
+$sidebar-hover: $nic-blue-gray-dark;
+$sidebar-item-focused: $faded-blue-two;
+$sidebar-item-focused-hovered: $faded-blue-two;
+$sidebar-scroll-color: #eee;
+$sidebar-menu-btn-bg-color: $nic-list-alternation;
+$sidebar-menu-btn-bg-color-hovered: #566672;
+
+$auth-text: $nic-white;
+$auth-line: $nic-white;
+$auth-input-border-focus: $nic-blue-middle;
+$auth-version: $nic-light-gray-middle;
+$auth-footer-text: $nic-light-gray-middle;

@@ -1,0 +1,123 @@
+//region color's names
+$dark-salmon: #cd6d6d;
+$alabaster: #f9f9f9;
+$alto: #dddddd;
+$wild-sand: #f6f6f6;
+$shark: #1c2023;
+$athens-gray: #f5f7f9;
+$victory-gray: #dfe2e6;
+$ivory: #ffffcd;
+$cool-grey: #abadaf;
+$faded-blue: #6498b8;
+$faded-blue-two: #6499b9;
+$flat-blue: #3786ad;
+$light-grey-blue: #91b4cb;
+$light-blue-grey: #b3d7ed;
+$pale-blue: #ddf2fd;
+$reddish: #cd4141;
+$gunmetal: #414e5b;
+$grey-blue: #6a7c8d;
+$silver: #d5d9dc;
+$silver-two: #e1e4e6;
+$pale-grey: #f5f7fa;
+$black: #333333;
+$brownish-grey: #666666;
+$warm-grey: #808080;
+$warm-grey-two: #999999;
+$greyish: #b3b3b3;
+$pinkish-grey: #bfbfbf;
+$pinkish-grey-two: #cccccc;
+$white: #d9d9d9;
+$white-two: #e6e6e6;
+$white-three: #f2f2f2;
+$white-four: #f7f7f7;
+$black-two: #000000;
+$white-five: #ffffff;
+$slate: #425260;
+$charcoal-grey: #2e3943;
+$gunmetal-two: #3b4a56;
+$silver-three: #b9c0c8;
+$warm-grey-three: #8c8c8c;
+$silver-four: #c3cad2;
+$silver-five: #e5e8eb;
+$light-grey-green: #bbd8a1;
+$pale-peach: #fedf9d;
+$blush: #f8a7a7;
+$cloudy-blue: #acc8d9;
+$light-blue-grey-two: #c0dff1;
+$pale-grey-two: #ebeef2;
+$creme: #ffffb3;
+$limeade: #559e15;
+//endregion
+
+
+/* SHADOWS */
+$mdb-shadow-key-umbra-opacity:              0.2 !default;
+$mdb-shadow-key-penumbra-opacity:           0.14 !default;
+$mdb-shadow-ambient-shadow-opacity:         0.12 !default;
+
+$brand-primary:                             darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:                             #5cb85c !default;
+$brand-info:                                #5bc0de !default;
+$brand-warning:                             #f0ad4e !default;
+$brand-error:                               #d9534f !default;
+
+$color-dark:                                #495057 !default;
+$color-light:                               #fff !default;
+$color-middle:                              #999 !default;
+$color-primary:                             #000 !default;
+$color-gray:                                #eee !default;
+
+$hover-bg:                                  $color-gray;
+$selected-bg:                               $faded-blue-two;
+$text-color-light:                          $color-light;
+$text-color-primary:                        $color-dark;
+$text-bg:                                   $color-light;
+
+$border-color:                              $color-gray;
+$tooltip-border-color:                      $border-color;
+$button-border:                             $border-color;
+$field-border:                              $border-color;
+$field-border-focus:                        blue;
+$field-border-focus-shadow:                 #0098FF;
+$field-error-border:                        $brand-error;
+$field-error-shadow:                        lighten($brand-error, 60%);
+$field-icon-error-color:                    $color-light;
+$field-icon-error-bg:                       $brand-error;
+$field-icon-info-color:                     $color-light;
+$field-icon-info-bg:                        $brand-info;
+
+$background-color:                          $color-light !default;
+
+
+$font-color-h1:                             $gunmetal !default;
+$font-color-h2:                             $gunmetal !default;
+$font-color-h3:                             $gunmetal !default;
+$font-color-h4:                             $gunmetal !default;
+$font-color-h5:                             $gunmetal !default;
+$font-color-h6:                             $gunmetal !default;
+
+$tooltip-bg-color:                          $background-color;
+
+$calendar-date-pass-color:                  $pale-grey;
+$calendar-date-pass-bg-color:               $athens-gray;
+$calendar-picker-wrap-bg-color:             $pale-grey;
+$calendar-date-days-color:                  $warm-grey-three;
+$calendar-table-bg-color:                   $pale-grey;
+$calendar-th-bg-color:                      $pale-grey;
+
+$datetime-pickertooltip-li-border-color:    $wild-sand;
+$datetime-pickertooltip-li-bg-color:        $wild-sand;
+$datetime-pickertooltip-li-hover:           $color-gray;
+
+$datetime-picker-color:                     $black;
+$datetime-picker-bg-color:                  $calendar-table-bg-color;
+$datetime-picker-input-border-color:        $pinkish-grey-two;
+$datetime-picker-date-days-bg-color:        $athens-gray;
+$datetime-picker-date-celebration-selected: $reddish;
+$datetime-picker-date-celebration-hover:    $dark-salmon;
+$datetime-picker-colored-color:             $color-light;
+$datetime-picker-date-head-bg-color:        $victory-gray;
+$datetime-picker-date-months-border-color:  $silver-four;
+$datetime-picker-tooltip-popover-bg-color:  $alabaster;
+$datetime-picker-tooltip-inner-bg-color:    $alabaster;
